@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .forms import UserRegistrationForm
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -12,7 +14,18 @@ def Aboutus(request):
     return render (request,'Aboutus.html')
 
 def Signup(request):
-    return render (request,'Signup.html')
+ if request.method=="POST":
+  form=UserRegistrationForm(request.POST)
+  if form.is_valid():
+     form.save()
+     return redirect('loginuser')
+     
+ else:
+  form=UserRegistrationForm()
+
+ return render(request, 'Signup.html',{
+  'form':form,
+ })
 
 def profile(request):
     return render (request,'profile.html')
