@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
     {%load static%}
     <!DOCTYPE html>
     <html lang="en">
@@ -70,19 +61,19 @@
             <nav class="main-nav">
                 <ul class="main-nav__items">
                     <li class="main-nav__item">
-                        <a href="#">Profile</a>
+                        <a href="{%url 'profile' %}">Profile</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="{% url 'service' %}">Services</a>
+                        <a href="{%url 'services' %}">Services</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="aboutUs/index.html">About Us</a>
+                        <a href="{%url 'Aboutus'%}">About Us</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="contactUs/index.html">Contact Us</a>
+                        <a href="{%url 'Contactus' %}">Contact Us</a>
                     </li>
                     <li class="main-nav__item main-nav__item--cta">
-                        <a href="signup/index.html">Sign up</a>
+                        <a href="{%url 'Signup' %}">Sign up</a>
                     </li>
                 </ul>
             </nav>
@@ -90,25 +81,25 @@
         <nav class="mobile-nav">
             <ul class="mobile-nav__items">
                 <li class="mobile-nav__item">
-                    <a href="profile/index.html">Profile</a>
+                    <a href="{%url 'profile' %}">Profile</a>
                 </li>
                 <li class="mobile-nav__item">
-                    <a href="service/index.html">Services</a>
+                    <a href="{%url 'services' %}">Services</a>
                 </li>
                 <li class="mobile-nav__item">
-                    <a href="aboutUs/index.html">About Us</a>
+                    <a href="{%url 'Aboutus'%}">About Us</a>
                 </li>
                 <li class="mobile-nav__item">
-                    <a href="contactUs/index.html">Contact Us</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="service/index.html">Services</a>
+                    <a href="{%url 'Contactus' %}">Contact Us</a>
                 </li>
                 <li class="mobile-nav__item mobile-nav__item--cta">
-                    <a href="signup/index.html">Sign up</a>
+                    <a href="{%url 'Signup' %}">Sign up</a>
                 </li>
             </ul>
         </nav>
+        {%block content%}
+
+        {%endblock content%}
     </body>
 
     </html>
