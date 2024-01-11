@@ -8,7 +8,7 @@ def index(request):
     return render(request,'index.html')
 
 def Contactus(request):
-    return render (request,'Contactus.html')
+    return render (request,'contact_details.html')
 
 def Aboutus(request):
     return render (request,'Aboutus.html')
