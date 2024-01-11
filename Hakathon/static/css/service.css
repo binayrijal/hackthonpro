@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+
+body {
+    font-family: Montserrat, sans-serif
+}
+
+
+#sidebar {
+    margin: 2rem;
+    margin-left: 4rem;
+
+    /* border-right: 1px solid hsl(220, 13%, 91%); */
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-container>#sidebar-navigation {
+    width: 30%;
+    padding: 2rem 0;
+    height: 100vh;
+    overflow-y: auto;
+
+}
+
+
+*:not(html) {
+
+    /* all html element expect <html>  tag*/
+    scrollbar-width: thin;
+    scrollbar-color: #397524 #EBE8EA;
+
+    ::-webkit-scrollbar {
+        width: 0.5vw;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: rgba(131, 131, 131, 0.9);
+    }
+}
+
+.sidebar-lists {
+    list-style: none;
+    padding: 0;
+
+}
+
+.transport-department__list:not(:first-child) {
+    /* target all list with class transport-department__list element expect first */
+    padding-top: 1.125rem;
+}
+
+.transport-department__list {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.125rem;
+}
+
+.transport-department__list--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.transport-department__list--header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: "IBM Plex Mono", monospace;
+    color: #111111;
+}
+
+.transport-department__list--header svg {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    background-color: #C5E366;
+    margin-right: 1rem;
+    border-radius: 6px;
+}
+
+
+.transport-department__list--items {
+    height: max-content;
+    list-style: none;
+    padding-left: 1.3rem;
+    margin: 1.125rem 0 0 0;
+}
+
+
+
+.transport-department__list--item a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    border-left: 1px solid #e5e7eb;
+    font-size: 1rem;
+    padding: 0.75rem;
+    padding-left: 1.125rem;
+    color: #222222;
+    opacity: 0.6;
+}
+
+
+/* bold transportation  sidebar applied only when its respective page is rendered */
+/*  if the route url===desired url then add the class open  from backend. */
+.transport-department__list--item a.open {
+    font-weight: 700;
+    opacity: 1;
+}
+
+#transport-office {
+    margin: 4rem;
+}
+
+.transport-office__header {
+    font-weight: 600;
+    width: 100%;
+    font-family: "Montserrat" sans-serif;
+    line-height: 28px;
+    font-size: 1.5rem;
+    color: rgba(25, 25, 25, 0.9);
+    margin: 0 0 24px 0;
+}
+
+.transport-office__description {
+    font-family: "Montserrat" sans-serif;
+    width: 100%;
+    line-height: 28px;
+    font-family: inherit;
+    font-size: 1.135rem;
+    color: rgb(39, 39, 39);
+    margin: 0 0 1.5rem 0;
+}
+
+/* search bar */
+.trans-location__title {
+    width: 100%;
+    font-size: 1.5rem;
+    color: rgba(25, 25, 25, 0.9);
+    margin: 1rem 0 1.5rem 0;
+
+}
+
+.trans-location__form {
+    margin: 0 0 1.5rem 0;
+}
+
+.home-form {
+    background-color: #e5e7eb;
+    width: 60%;
+    border-radius: 12px;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+.crosshair-container {
+    position: relative;
+    width: 80%;
+}
+
+.fa-location-crosshairs {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.form-input {
+    background-color: #e5e7eb;
+    border: 1px solid #e5e7eb;
+    padding: 1.2rem 1.2rem 1.2rem 2rem;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+
+}
+
+.form-input:focus-visible {
+    outline: none;
+}
+
+.btn.search {
+    margin: 0;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    position: absolute;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    right: 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+
+}
+
+.btn.search:hover,
+.btn.search:active {
+    cursor: pointer;
+    background-color: #C5E366;
+}
+
+span {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    font-family: 'IBM Plex Mono' monospace;
+    font-weight: 600;
+}
+
+/* edl */
+.nearby-office {
+    border-radius: 20px;
+    border: 1px solid gray;
+    width: 50vw;
+}
+
+.nearby-office ul {
+    list-style: none;
+}
+
+.nearby-office ul>li {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+office-list h4 {}
