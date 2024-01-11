@@ -45,3 +45,12 @@ class UserLoginForm(AuthenticationForm):
         'autocomplete':'current-password',
         'class':'form-control',
     }))
+
+ 
+
+class UserPasswordResetForm(PasswordResetForm):
+     email=forms.EmailField(required=True,label=_("email"),widget=forms.EmailInput(attrs={
+         'class':'form-control',
+         'placeholder':'enter email',
+         'autocomplete':'email',
+    }))
