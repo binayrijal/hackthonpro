@@ -5,14 +5,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
+    <title>contract Us</title>
+    <!--                        google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{%static 'css/aboutus.css' %}">
+
+    <!--                    fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--                    css -->
     <link rel="stylesheet" href="{%static 'css/aboutus.css' %}">
 	<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
 	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
@@ -33,46 +39,50 @@
 </head>
 
 <body>
-    <main id="about-us">
-        <div class="about-us__background"></div>
-
-        <section class="about-us-flex">
-            <div class="about-us__service--summery">
-                <h3 class="service-title">Welcome to Predicta!</h3>
-                <p class="service-description">Starting as a small business in kathmandu, we have big dreams. Our
-                    passion for good governance means that we provide our customers with nothing but the highest quality
-                    of service, that are guaranteed to meet their needs and keep them satisfied! <br>
-                    With a motivated team, we strive to be the creative minds that bring a smile to your face. That iss
-                    why we are always looking for innovative new ways to get the best to you.</p>
-            </div>
-            <div>
-
+    <!-- navbar -->
+    <main>
+        <section id="contract-items">
+            <div class="contract-detail">
                 <div>
-                    <div class="team-title">
-                        <h3>Developers Team</h3>
-                    </div>
-                    <div class="our-team">
-                        <div class="our-team__member">
-                            <img src="https://wallpaperaccess.com/full/1429813.jpg" alt="team-member-1">
-                            <p>Sushil Kumar Bhatta</p>
-                        </div>
-                        <div class="our-team__member">
-                            <img src="https://wallpaperaccess.com/full/1429813.jpg" alt="team-member-2">
-                            <p>Binayak Bhattrai</p>
-                        </div>
-                        <div class="our-team__member">
-                            <img src="https://wallpaperaccess.com/full/1429813.jpg" alt="team-member-3">
-                            <p>Pawan Joshi</p>
-                        </div>
-
-                        <div class="our-team__member">
-                            <img src="https://wallpaperaccess.com/full/1429813.jpg" alt="team-member-3">
-                            <p>Samman Basnet</p>
-                        </div>
-                    </div>
+                    <h1 class="contract-detail__title">Contract Info</h1>
                 </div>
+                <div class="contract-detail__item number">
+                    <i class="fa-solid fa-phone-volume" style="color: #4fa155;"></i>
+                    <p>+977 9810199330</p>
+                </div>
+
+                <div class="contract-detail__item email">
+                    <i class="fa-solid fa-envelope" style="color: #4fa155;"></i>
+                    <p>sushil.191547@edu.np</p>
+                </div>
+                <div class="contract-detail__item address">
+                    <i class="fa-solid fa-location-dot" style="color: #4fa155;"></i>
+                    <p>Ward No. 32, Chapro, Jabibuti, kathamandu, Nepal</p>
+                </div>
+            </div>
+
+            <form action="" class="contract-query">
+                <input type="text" name="name" placeholder="Enter your name" class="query">
+                <input type="email" name="email" placeholder="Enter a valid email address" class="query">
+                <textarea name="comment_message" cols="20" rows="10" class="query">Enter your message</textarea>
+                <button type="submit">Submit</button>
+            </form>
+
         </section>
+        <section class="blue-background"></section>
     </main>
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
+                    <a href="#">Support</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
     <script src="{% static 'js/jquery.min.js' %}"></script>
 		<!-- jquery Migrate JS -->
 		<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
@@ -111,7 +121,8 @@
 		<!-- Bootstrap JS -->
 		<script src="{ % static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
-		<script src="{ % static 'js/main.js' %}"></script>  
+		<script src="{ % static 'js/main.js' %}"></script>
         <script src="{% static 'assets/js/service.js' %}"></script>
 </body>
+
 </html>

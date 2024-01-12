@@ -17,9 +17,17 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
     <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
         rel="stylesheet" />
+    <style>
+        .span.open {
+            color: green;
+        }
 
+        .span.closed {
+            color: red;
+        }
+    </style>
     <script src="{% static 'js/share.js'%}"></script>
-
+    <script src="{% static 'js/service.js'%}"></script>
 </head>
 
 <body>
@@ -84,7 +92,11 @@
             <section id="sidebar">
                 <aside id="sidebar-navigation">
                     <ul class="sidebar-lists">
+<<<<<<< HEAD
+                        
+=======
                         {%if selected_service%}
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
                         <li title="transport-department__list" class="transport-department__list">
                             <div class="transport-department__list--header">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
@@ -94,35 +106,64 @@
                                 </svg>
 
                                 <h2 class="transport-department__list--title"> <a
+<<<<<<< HEAD
+                                        href="#transportation"></a>Transportation</a></h2>
+=======
                                         href="#transportation"></a>{{selected_service}} </a></h2>
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
 
                             </div>
 
                             <ul class="transport-department__list--items">
+<<<<<<< HEAD
+                                
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'newlicense' %}" name="newlicense">new_license</a></li>
+=======
                                 {%for s in selected_servicename%}
                                 <li class="transport-department__list--item"><a href="">{{s}}</a></li>
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
                                 <!--<li class="transport-department__list--item"><a href="">Renew Licence</a></li>
                                 <li class="transport-department__list--item"><a class="open" href="">new vehicle
                                         registration</a>
                                 </li>-->
+<<<<<<< HEAD
+                               
+                            </ul>
+                        </li>
+                        
+=======
                                 {%endfor%}
                             </ul>
                         </li>
                         {%endif%}
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
                         <li title="transport-department__list" class="transport-department__list">
                             <div class="transport-department__list--header">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
-                                    viewBox="0 0 448 512">!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    viewBox="0 0 448 512">!Font Awesome Free 6.5.1 by @fontawesome -
+                                    https://fontawesome.com License - https://fontawesome.com/license/free Copyright
+<<<<<<< HEAD
+                                    2023 Fonticons, Inc.
+=======
+                                    2023 Fonticons, Inc.-->
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
                                     <path
                                         d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
                                 </svg>
-                                <h2 class="transport-department__list--title">Passport Department</h2>
+                                <h2 class="transport-department__list--title">Citizenship</h2>
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">new Passport</a></li>
-                                <li class="transport-department__list--item"><a href="">Renew Passport</a></li>
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
+<<<<<<< HEAD
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'bansaj' %}" name="bansaj">Bansaj</a></li>
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'birth' %}" name="birth">Citizenship by Birth</a></li>
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'natural' %}" name="natural">Citizenship by
+=======
+                                <li class="transport-department__list--item"><a href="">Bansaj</a></li>
+                                <li class="transport-department__list--item"><a href="">Citizenship by Birth</a></li>
+                                <li class="transport-department__list--item"><a href="">Citizenship by
+>>>>>>> adf1c1e52f587cd06362b1ea9bd70387d60b85ab
+                                        naturalization.</a></li>
                             </ul>
                         </li>
                         <li title="transport-department__list" class="transport-department__list">
@@ -132,13 +173,13 @@
                                     <path
                                         d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
                                 </svg>
-                                <h2 class="transport-department__list--title">ward office</h2>
+                                <h2 class="transport-department__list--title">Municipality</h2>
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">Marriage registration</a></li>
-                                <li class="transport-department__list--item"><a href="">Birth registration</a></li>
-                                <li class="transport-department__list--item"><a href="">citizenship registration</a>
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'marriage' %}" name="marriage">Marriage registration</a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'birthreg' %}"  name="birth">Birth registration</a></li>
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'deathreg' %}" name="death">Death registration</a>
                                 </li>
                             </ul>
                         </li>
@@ -153,9 +194,9 @@
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">pay tax</a></li>
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
-                                <li class="transport-department__list--item"><a href="">Lorem ipsum dolor sit.</a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'paytax' %}" name="paytax">pay tax</a></li>
+                                <li class="transport-department__list--item"><a href="" name="lorem">Lorem, ipsum dolor.</a></li>
+                                <li class="transport-department__list--item"><a href="" name="loremipsum">Lorem ipsum dolor sit.</a></li>
                             </ul>
                         </li>
                         <li title="transport-department__list" class="transport-department__list">
@@ -165,13 +206,12 @@
                                     <path
                                         d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
                                 </svg>
-                                <h2 class="transport-department__list--title">Lorem ipsum.</h2>
+                                <h2 class="transport-department__list--title">Passport</h2>
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor. </a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'firstpassport' %}" name="firstpassport">First Time Passport</a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'newlicence' %}" name="renewpassport">Renew Passport</a></li>
                             </ul>
                         </li>
                         <li title="transport-department__list" class="transport-department__list">
@@ -190,7 +230,6 @@
                                 <li class="transport-department__list--item"><a href="">Lorem ipsum dolor sit.</a></li>
                             </ul>
                         </li>
-                    
                     </ul>
                 </aside>
             </section>
@@ -204,18 +243,16 @@
                         Vehicle
                         and Transport Management Act 2049 and Vehicle and Transport Management Rules 2054, is to provide
                         safe, reliable and easy transportation service to the public and goods carrier.</p>
-                        {%for methods in all_methods%}
-                        <h1>{{all_methods}}</h1>
-                        {%endfor%}
+                    {%for m in methods%}
+                    <h1>{{m}}</h1>
+                    {%endfor%}
                 </div>
                 <h1 class="trans-location__title"> See the nearby office</h1>
                 <div class="trans-location__form">
                     <form class="home-form">
                         <div class="crosshair-container">
                             <i class="fas fa-location-crosshairs"></i>
-                            <input id="search-input"
-                                placeholder="Sarweswor Marg, Koteshower, Kathmandu Metropolitan City 44810, Nepal"
-                                type="search" id="form1" class="form-input" />
+                            <input id="search-input" placeholder="..." type="search" class="form-input" />
                         </div>
                         <!-- inintially the user location will be loaded and if user wants to change that then it can be done .-->
                         <button class="search btn">
@@ -230,42 +267,30 @@
                             <div class="list-child__content">
                                 <h3>DOTM,Chabhil</h3>
                                 <p>2.4 km (Appox. 24min)</p>
-                                <p><span class="closed">Closed</span> | opens 9AM tue</p>
+                                <p>
+                                <p class="span">Closed</span>
+                                <p class="span1">opens 9AM tue</span>
+                                </p>
                                 <!-- Open | closes 4 PM today -->
                             </div>
                             <div class="list-child__icon">
                                 <div class="icon">
-                                    <button type="submit">
+                                    <a href="submit">
                                         <i class="fa-solid fa-diamond-turn-right fa-2x"></i>
-                                    </button>
+                                    </a>
                                     <p>Direction</p>
                                 </div>
                                 <div class="icon">
-                                    <button type="submit"> <i class="fa-solid fa-galactic-senate  fa-2x"></i>
-                                    </button>
+                                    <a href="https://www.dotm.gov.np/" target="_blank"> <i
+                                            class="fa-solid fa-galactic-senate  fa-2x"></i>
+                                    </a>
                                     <p>website</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="office-list">
-                            <div class="list-child__content">
-                                <h3>DOTM,Chabhil</h3>
-                                <p>2.4 km (Appox. 24min)</p>
-                                <p><span class="closed">Closed</span> | opens 9AM tue</p>
-                                <!-- Open | closes 4 PM today -->
-                            </div>
-                            <div class="list-child__icon">
-                                <div class="icon">
-                                    <button type="submit">
-                                        <i class="fa-solid fa-diamond-turn-right fa-2x"></i>
-                                    </button>
-                                    <p>Direction</p>
-                                </div>
-                                <div class="icon">
-                                    <button type="submit"> <i class="fa-solid fa-galactic-senate  fa-2x"></i>
-                                    </button>
-                                    <p>website</p>
-                                </div>
+                            <div>
+                              {%for m in messages%} 
+                               <h1>{{m}}</h1> 
+                              {%endfor%}
                             </div>
                         </li>
                     </ul>
@@ -276,7 +301,51 @@
 
 
     </main>
-    <script src="{% static 'js/map.js'%}"></script>
+
+    <script src="{% static 'assets/js/map.js' %}"></script>
+    <script src="{% static 'assets/js/service.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+		<!-- jquery Migrate JS -->
+	<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
+	   <!-- jquery Ui JS -->
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<!-- Easing JS -->
+    <script src="{% static 'js/easing.js' %}"></script>
+		<!-- Color JS -->
+	<script src="{ % static 'js/colors.js' %}"></script>
+		<!-- Popper JS -->
+	<script src="{% static 'js/popper.min.js' %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+	<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+		<!-- Jquery Nav JS -->
+    <script src="{% static 'js/jquery.nav.js' %}"></script>
+		<!-- Slicknav JS -->
+	<script src="{% static 'js/slicknav.min.js' %}"></script>
+		<!-- ScrollUp JS -->
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+		<!-- Niceselect JS -->
+	<script src="{ % static 'js/niceselect.js' %}"></script>
+		<!-- Tilt Jquery JS -->
+	<script src="{ % static 'js/tilt.jquery.min.js' %}"></script>
+		<!-- Owl Carousel JS -->
+    <script src="{ % static 'js/owl-carousel.js' %}"></script>
+		<!-- counterup JS -->
+	<script src="{ % static 'js/jquery.counterup.min.js' %}"></script>
+		<!-- Steller JS -->
+	<script src="{ % static 'js/steller.js' %}"></script>
+		<!-- Wow JS -->
+	<script src="{ % static 'js/wow.min.js' %}"></script>
+		<!-- Magnific Popup JS -->
+	<script src="{ % static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<!-- Counter Up CDN JS -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+	<script src="{ % static 'js/bootstrap.min.js' %}"></script>
+		<!-- Main JS -->
+	<script src="{ % static 'js/main.js' %}"></script>
+
+    <script src="{% static 'assets/js/service.js' %}"></script>
 </body>
 
 </html>
