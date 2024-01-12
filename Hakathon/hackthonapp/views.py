@@ -90,16 +90,6 @@ def feedbackuser(request):
 
            messages.success(request,'user doesnot exist')
        
-
-       
-
-          
-    
-          
-       
-
-       
-=======
     return render (request,'services.html')
 
 from django.shortcuts import render
@@ -116,4 +106,3 @@ def text_to_speech(request):
         return render(request, 'tts_app/index.html', {'audio_path': 'static/tts_app/output.mp3'})
 
     return render(request, 'tts_app/index.html')
->>>>>>> 31ae614afcbaabb3c0fb1cf25a74f1d76c6a61a7
