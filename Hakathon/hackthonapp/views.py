@@ -33,3 +33,18 @@ def profile(request):
 def services(request):
     
     return render (request,'services.html')
+
+from django.shortcuts import render
+from gtts import gTTS
+
+def text_to_speech(request):
+    if request.method == 'POST':
+        text = request.POST.get('text', '')
+        language = 'en'  # Set the language code accordingly
+
+        tts = gTTS(text=text, lang=language, slow=False)
+        tts.save('tts_app/static/tts_app/output.mp3')  # Save the TTS audio file
+
+        return render(request, 'tts_app/index.html', {'audio_path': 'static/tts_app/output.mp3'})
+
+    return render(request, 'tts_app/index.html')
