@@ -1,19 +1,12 @@
 
 
+{% load static %}
+  
+  <!-- Bootstrap core CSS -->
+   
+  
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css%}" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
-
-  </head>
-
-<body>
+{% block content %}
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -36,7 +29,7 @@
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="{% static 'assets/images/logo1.png %}" alt="EasyGov">
+              <img src="{% static 'assets/images/logo1.png' %}" alt="EasyGov">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -330,12 +323,6 @@
 
 
 <!-- Scripts -->
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'assets/js/owl-carousel.js'%}"></script>
-<script src="{% static assets/js/animation.js %}"></script>
-<script src="{% static assets/js/imagesloaded.js %}"></script>
-<script src="{% static assets/js/popup.js %}"></script>
-<script src="{% static assets/js/custom.js %}"></script>
-</body>
-</html>
+
+
+{%endblock content%}
