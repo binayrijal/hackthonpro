@@ -1,13 +1,89 @@
-{%extends 'base.html'%}
 {%load static%}
-   
-{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- fontawessome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/shared.css' %}">
+    <link rel="stylesheet" href="{% static 'css/service.css'%}">
+
+    <!-- Add mapbox JavaScript -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+        rel="stylesheet" />
+
+    <script src="{% static 'js/share.js'%}"></script>
+
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <div class="main-header__div">
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+            <a href="../index.html" class="main-header__brand">
+                <img src="{%static 'images/images/dragon-1578289_640.png'%}" alt=" dragon image">
+                <h2>easygov</h2>
+            </a>
+
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="../profile/index.html">Profile</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html">Services</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../aboutUs/index.html">About Us</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../contactUs/index.html">Contact Us</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="../signup/index.html">Sign up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="../profile/index.html">Profile</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="index.html">Services</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../aboutUs/index.html">About Us</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../contactUs/index.html">Contact Us</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../service/index.html">Services</a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--cta">
+                <a href="../signup/index.html">Sign up</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <div class="section-container">
             <section id="sidebar">
                 <aside id="sidebar-navigation">
                     <ul class="sidebar-lists">
-                        
                         <li title="transport-department__list" class="transport-department__list">
                             <div class="transport-department__list--header">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
@@ -25,7 +101,7 @@
                             <ul class="transport-department__list--items">
                                 <li class="transport-department__list--item"><a href="">new licence</a></li>
                                 <li class="transport-department__list--item"><a href="">Renew Licence</a></li>
-                                <li class="transport-department__list--item"><a href="">new vehicle
+                                <li class="transport-department__list--item"><a class="open" href="">new vehicle
                                         registration</a>
                                 </li>
                             </ul>
@@ -125,24 +201,11 @@
                         and Transport Management Act 2049 and Vehicle and Transport Management Rules 2054, is to provide
                         safe, reliable and easy transportation service to the public and goods carrier.</p>
                 </div>
-                
-                    #for show methods for any selections
-                    <div class="trans-info">
-                    <h1 class="transport-office__header">Introduction</h1>
-                    
-                    <p class="transport-office__description">
-                        {%for methods in all_methods%}
-                        <h1>{{methods}}</h1>
-                        {%endfor%}
-                    </p>
-                    </div> 
-                
-                <h2 class="trans-location__title"> See the nearby office</h2>
+                <h1 class="trans-location__title"> See the nearby office</h1>
                 <div class="trans-location__form">
                     <form class="home-form">
                         <div class="crosshair-container">
                             <i class="fas fa-location-crosshairs"></i>
-
                             <input id="search-input"
                                 placeholder="Sarweswor Marg, Koteshower, Kathmandu Metropolitan City 44810, Nepal"
                                 type="search" id="form1" class="form-input" />
@@ -157,25 +220,56 @@
                 <div class="nearby-office">
                     <ul>
                         <li class="office-list">
-                            <p>Department of transport management, Chabhil, Kathmandu</p>
-                            <p>2.4 km (Appox. 24min)</p>
-                            <a href=""><i class="fa-solid fa-route"></i></a>
+                            <div class="list-child__content">
+                                <h3>DOTM,Chabhil</h3>
+                                <p>2.4 km (Appox. 24min)</p>
+                                <p><span class="closed">Closed</span> | opens 9AM tue</p>
+                                <!-- Open | closes 4 PM today -->
+                            </div>
+                            <div class="list-child__icon">
+                                <div class="icon">
+                                    <button type="submit">
+                                        <i class="fa-solid fa-diamond-turn-right fa-2x"></i>
+                                    </button>
+                                    <p>Direction</p>
+                                </div>
+                                <div class="icon">
+                                    <button type="submit"> <i class="fa-solid fa-galactic-senate  fa-2x"></i>
+                                    </button>
+                                    <p>website</p>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <p>Department of transport management,Ekantakuma, Lalitpur</p>
-                            <p>5.4 km (Appox. 24min)</p>
-                            <a href=""><i class="fa-solid fa-route"></i></a>
-                        </li>
-                        <li>
-                            <p>Department of transport management,Ekantakuma, Lalitpur</p>
-                            <p>5.4 km (Appox. 24min)</p>
-                            <a href=""><i class="fa-solid fa-route"></i></a>
+                        <li class="office-list">
+                            <div class="list-child__content">
+                                <h3>DOTM,Chabhil</h3>
+                                <p>2.4 km (Appox. 24min)</p>
+                                <p><span class="closed">Closed</span> | opens 9AM tue</p>
+                                <!-- Open | closes 4 PM today -->
+                            </div>
+                            <div class="list-child__icon">
+                                <div class="icon">
+                                    <button type="submit">
+                                        <i class="fa-solid fa-diamond-turn-right fa-2x"></i>
+                                    </button>
+                                    <p>Direction</p>
+                                </div>
+                                <div class="icon">
+                                    <button type="submit"> <i class="fa-solid fa-galactic-senate  fa-2x"></i>
+                                    </button>
+                                    <p>website</p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
         </div>
         </section>
-        </div>
+        <div id="map" style="width: 40%; height: 400px;"></div>
+
+
     </main>
-{%endblock content%}
- 
+    <script src="{% static 'js/map.js'%}"></script>
+</body>
+
+</html>
