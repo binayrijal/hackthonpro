@@ -1,114 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends 'base.html'%}
+{%load static %}
+{% block content %}
+<main>
+    <section id="home-section">
+        <div class="home-container">
+            <div class="home-image">
+                <img src="https://demo.gethugothemes.com/docbox/site/images/banner-image_hu09361191bdbe261dd915020ba9ae33fa_18351_499x503_resize_q90_h2_lanczos_3.webp"
+                    alt="home background image">
+            </div>
+            <div class="home-content">
+                <h1 class="home-content__header">Lets get started with Easygov</h1>
+                <p class="hoem-content__description">
+                    we provide you with every detail of offices under Nepal Government for easy and
+                    efficent experience of the users by saving time and effort.
+                </p>
+                <form class="home-form">
+                    <input id="search-input" placeholder="Search nearby offices" type="search" id="form1"
+                        class="form-input" />
+                    <button class="search btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
+                <!--<form class="home-form" action="#" method="post" >
+                    {%csrf_token%}
+                    <select name="category" id="category-select" class="form-input">
+                        {% for c in categories %}
+                            <option  id="{{c.0}}" value="{{ c.0 }}">{{ c.1 }} </option>
+                        {% endfor %}
+                    </select>
+                    <button class="search btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
+            -->
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="services-container">
+            <h1 class="services-header">Our Services</h1>
+            <div class="service-card">
+                {%for c in categories%}
+                
+                <article class="service-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                    </svg>
+                   
+                    <h2 class="service-article__header">{{c.1}}</h2>
+                   
+                    <p class="service-article__description">Established for the smooth management of transportation
+                        services.</p>
+                    <a class="service-article__btn" href="">
+                        <span>View details</span>
+                        <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                {%endfor%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    {%load static%}
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EasyGov</title>
-
-        <!-- mdb -->
-        <!-- Bootstrap CSS -->
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            crossorigin="anonymous">
-
-        <!-- Optional: Bootstrap JavaScript and jQuery (if not included elsewhere in your project) -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            crossorigin="anonymous"></script>
-        <!-- MDB UI Kit CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
-            crossorigin="anonymous">
-
-        <!-- MDB UI Kit JavaScript -->
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-
-        <!-- css -->
-        <link rel="stylesheet" href="{% static 'css/shared.css' %}">
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-
-
-        <!-- fontAwesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+                <article class="service-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                    </svg>
+                    <h2 class="service-article__header">Passport Office </h2>
+                    <p class="service-article__description"> Issues passports to Nepal citizens and Travel Documents
+                        to legally eligible persons .
+                    </p>
+                    <a class="service-article__btn" href="">
+                        <span>View details</span>
+                        <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                    </svg>
+                    <h2 class="service-article__header">Ward Office</h2>
+                    <p class="service-article__description">represents a wide variety of community interests and
+                        services. </p>
+                    <a class="service-article__btn" href="">
+                        <span>View details</span>
+                        <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                    </svg>
+                    <h2 class="service-article__header">Tax department</h2>
+                    <p class="service-article__description"> enforce
+                        Tax Laws and administration for Income Tax, Value Added Tax,etc
+                    </p>
+                    <a class="service-article__btn" href="">
+                        <span>View details</span>
+                        <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
 
 
-        <!-- javascript -->
-        <script src="{% static 'js/share.js'%}" defer></script>
-        <script src="{% static 'js/d.js'%}" defer></script>
-
-    </head>
-
-    <body>
-        <div class="backdrop"></div>
-        <header class="main-header">
-            <div class="main-header__div">
-                <button class="toggle-button">
-                    <span class="toggle-button__bar"></span>
-                    <span class="toggle-button__bar"></span>
-                    <span class="toggle-button__bar"></span>
-                </button>
-                <a href="index.html" class="main-header__brand">
-                    <img src="{% static 'images/images/dragon-1578289_640.png' %}" alt=" dragon image">
-                    <h2>easygov</h2>
-                </a>
 
             </div>
-            <nav class="main-nav">
-                <ul class="main-nav__items">
-                    <li class="main-nav__item">
-                        <a href="#">Profile</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="{% url 'service' %}">Services</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="aboutUs/index.html">About Us</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="contactUs/index.html">Contact Us</a>
-                    </li>
-                    <li class="main-nav__item main-nav__item--cta">
-                        <a href="signup/index.html">Sign up</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <nav class="mobile-nav">
-            <ul class="mobile-nav__items">
-                <li class="mobile-nav__item">
-                    <a href="profile/index.html">Profile</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="service/index.html">Services</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="aboutUs/index.html">About Us</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="contactUs/index.html">Contact Us</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="service/index.html">Services</a>
-                </li>
-                <li class="mobile-nav__item mobile-nav__item--cta">
-                    <a href="signup/index.html">Sign up</a>
-                </li>
-            </ul>
-        </nav>
-    </body>
+        </div>
+    </section>
+    <section></section>
+    <section></section>
+</main>
 
-    </html>
+{%endblock content %}
