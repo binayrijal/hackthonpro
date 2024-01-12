@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import UserRegistrationForm
 from django.contrib import messages
+from .models import service_name
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse,JsonResponse
 from .models import service_name,service,feedback
@@ -98,20 +99,6 @@ def feedbackuser(request):
        
 
        
+
     return render (request,'services.html')
-
-from django.shortcuts import render
-from gtts import gTTS
-
-def text_to_speech(request):
-    if request.method == 'POST':
-        text = request.POST.get('text', '')
-        language = 'en'  # Set the language code accordingly
-
-        tts = gTTS(text=text, lang=language, slow=False)
-        tts.save('tts_app/static/tts_app/output.mp3')  # Save the TTS audio file
-
-        return render(request, 'tts_app/index.html', {'audio_path': 'static/tts_app/output.mp3'})
-
-    return render(request, 'tts_app/index.html')
 

@@ -1,0 +1,737 @@
+<<<<<<< HEAD
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>EasyGov-A Digital बडापत्र​</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Favicon -->
+        <link rel="icon" href="img/favicon.png">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="css/datepicker.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+=======
+{%extends 'base.html'%}
+{%load static %}
+{% block content %}
+<main>
+    <section id="home-section">
+        <div class="home-container">
+            <div class="home-image">
+                <img src="https://demo.gethugothemes.com/docbox/site/images/banner-image_hu09361191bdbe261dd915020ba9ae33fa_18351_499x503_resize_q90_h2_lanczos_3.webp"
+                    alt="home background image">
+            </div>
+            <div class="home-content">
+                <h1 class="home-content__header">Lets get started with Easygov</h1>
+                <p class="hoem-content__description">
+                    we provide you with every detail of offices under Nepal Government for easy and
+                    efficent experience of the users by saving time and effort.
+                </p>
+                <form class="home-form" method="post" action="{% url 'services' %}">
+                    {% csrf_token%}
+                    <input id="search-input" placeholder="Search nearby offices" type="search" id="form1"
+                        class="form-input" name="search" />
+                    <button class="search btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
+                <!--<form class="home-form" action="#" method="post" >
+                    {%csrf_token%}
+                    <select name="category" id="category-select" class="form-input">
+                        {% for c in categories %}
+                            <option  id="{{c.0}}" value="{{ c.0 }}">{{ c.1 }} </option>
+                        {% endfor %}
+                    </select>
+                    <button class="search btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
+            -->
+>>>>>>> 7459cac5b434d0edbe36027557d1584682c56ddf
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+		
+	
+		<!-- Header Area -->
+		<header class="header" >
+			
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img src="img/logo.png" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											
+											
+											<li><a href="#">Services </a></li>
+											<li><a href="#">Contact Details <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="#">About Us <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="contact.html">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+
+							<div class="col-lg-2 col-12">
+								<div class="get-quote">
+									<a href="signup.html" class="btn">login</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Slider Area -->
+		<section class="slider">
+			<div class="hero-slider">
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>We Provide <span>E-governance</span> Services That You Can <span>Trust!</span></h1>
+									<p>Get Updated with Easy Gov-A Digital बडापत्र​. </p>
+									<div class="button">
+										<a href="#" class="btn">Services</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/Untitled design.png')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>We Provide <span>List of E-governance</span> Services That You Can <span>Trust!</span></h1>
+									<p>Get Updated with Easy Gov-A Digital बडापत्र​. </p>
+									<div class="button">
+										<a href="#" class="btn">Services</a>
+										<a href="#" class="btn primary">About Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<span>Foreign Travel</span>
+										<ol style="color: black;">
+											<h4>Department of Foreign Employment (DoFE):</h4>
+											<ol style="color: black;">
+												<li>Effortless Work Abroad Opportunities</li>
+												<li> Guidance for Migrant Workers</li>
+												<li>Transparent Visa and Permit Processes</li>
+												<li>Support for Migrant Worker Well-being</li>
+											</ol>
+											
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<span>Transportation Services:
+										</span>
+										<h4>Department of Transport Management (DoTM):</h4>
+										<ol style="color: black;">
+												<li>Vehicle registration</li>
+												<li>Driving license issuance and renewal</li>
+												<li>Route permit for public vehicles</li>
+												<li>Vehicle fitness test</li>
+											  
+										  </ol>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<span>Duration</span>
+										<h4>Opening Hours</h4>
+										<ul class="time-sidual">
+											<li class="day">Sunday- Friday :<span>10.00am-4.00pm</span></li>
+											<li class="day">Closed On saturdays <span></span></li>
+											
+										</ul>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area -->
+
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Get Prepared Before You Visit The Government Ofiices</h2>
+							<img src="img/section-img.png" alt="#">
+							<p>Don't keep getting rejected by officials just because you lacked information.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="fa-solid fa-2x fa-hourglass-half"></i>
+
+							</div>
+							<h3>Save Time</h3>
+							<p>Save time instead of returning home to get back your essential documents.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="fa-brands fa-accessible-icon"></i>
+							</div>
+							<h3>Easy Access</h3>
+							<p>Experience unmatched convenience as EasyGov simplifies your interaction with government processes.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="fa-solid fa-lightbulb"></i>
+							</div>
+							<h3>Empowering Insights</h3>
+							<p>Access comprehensive information effortlessly, making informed decisions with ease.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		
+		
+		
+		<!-- Start Why choose -->
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Offer Different Services To EASE Your Government Office Visit Experience!</h2>
+							<img src="img/section-img.png" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>Who We Are</h3>
+							<p>Welcome to EasyGov, where simplicity meets empowerment. We are not just a platform; we are the bridge that connects you seamlessly to essential government services. Here, information is not just data; it's the key to unlocking a world of possibilities. EasyGov is not just a name; it's a commitment to redefine convenience, making your interaction with government processes not just easy, but delightfully effortless. Join us as we carve a path where navigating bureaucracy is as smooth as a cream, ensuring you have the tools to navigate the complexities of government services with confidence and ease. </p>
+							<p>This is EasyGov—where simplicity and empowerment intertwine to reshape your experience.</p>
+							<div class="row">
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-check-circle"></i>Streamlined access to government services.</li>
+        <li><i class="fa fa-check-circle"></i>Comprehensive information at your fingertips.</li>
+        <li><i class="fa fa-check-circle"></i>Effortless navigation through bureaucratic processes.</li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-check-circle"></i>Empowering you with knowledge and insights.</li>
+        <li><i class="fa fa-check-circle"></i>Transforming complexity into clear, actionable steps.</li>
+        <li><i class="fa fa-check-circle"></i>Supreme convenience in every interaction.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Rights -->
+						<div class="choose-right">
+							<div class="video-image">
+								<!-- Video Animation -->
+								<div class="promo-video">
+									
+								</div>
+								<!--/ End Video Animation -->
+								<img src="img/Untitled design2.png" alt="EasyGov">
+							</div>
+						</div>
+						<!-- End Choose Rights -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Why choose -->
+		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>Do you need want to collaborate with us? Call @ 9812345665</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
+							<div class="button">
+								<a href="#" class="btn">Contact Now</a>
+								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
+		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Get Prepared Before You Visit The Government ofiices </h2>
+							<img src="img/section-img.png" alt="#">
+							<p>NO REJECTION,NO HASSLE!!!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<!-- <div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+		
+		<!-- Start service -->
+		<section class="services section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- <div class="section-title">
+							<h2>Get Prepared Before You Visit The Government ofiices </h2>
+							<img src="img/section-img.png" alt="#">
+							<p>Don't keep getting rejected by offials just because you got less information.</p>
+						</div> -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-prescription"></i>
+							<h4><a href="service-details.html">General Enquiry</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="fa-solid fa-passport"></i>
+							<h4><a href="service-details.html">Passport renewal services</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="fa-solid fa-id-card"></i>
+							<h4><a href="service-details.html">Liscence Renewal Services</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="fa-solid fa-certificate"></i>
+							<h4><a href="service-details.html">NEB Transcripts</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="fa-regular fa-file"></i>
+							<h4><a href="service-details.html">No Objection Letter</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="fa-solid fa-id-card-clip"></i>
+							<h4><a href="service-details.html">National ID Card</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End service -->
+		
+		
+		
+		
+						
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+		
+		<!--/Ens clients -->
+		
+		<!-- Start Appointment -->
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Always Ready to Help You.</h2>
+							<img src="img/section-img.png" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" action="#">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="name" type="text" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="email" type="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="phone" type="text" placeholder="Phone">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
+											<ul class="list">
+												<li data-value="1" class="option selected ">Liscence Department</li>
+												<li data-value="2" class="option">DOTM</li>
+												<li data-value="3" class="option">Foriegn Employment</li>
+												<li data-value="4" class="option">District Office</li>
+												<li data-value="5" class="option">Ward Office</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="text" placeholder="Date" id="datepicker">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group">
+										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">Submit Your Review</button>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="img/contact-img.png" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+		
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>Welcome to EasyGov! At EasyGov, we are committed to simplifying access to essential government services. Our mission is to empower individuals by providing comprehensive information and streamlining processes. With a user-centric approach and a commitment to innovation, we strive to make government services more accessible and efficient for everyone. Join us on this journey to a hassle-free experience with EasyGov. Thank you for being a part of our community!</p>
+								
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+										
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Contact us</h2>
+								<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+								<ul class="time-sidual">
+									<li class="day">Sunday - Friday <span>10.00am-5.00pm</span></li>
+									<li class="day">Closed on <span>Public Holidays</span></li>
+								
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2024 |  All Rights Reserved by BBSS </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		
+		<!-- jquery Min JS -->
+        <script src="js/jquery.min.js"></script>
+		<!-- jquery Migrate JS -->
+		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<!-- jquery Ui JS -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Easing JS -->
+        <script src="js/easing.js"></script>
+		<!-- Color JS -->
+		<script src="js/colors.js"></script>
+		<!-- Popper JS -->
+		<script src="js/popper.min.js"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="js/bootstrap-datepicker.js"></script>
+		<!-- Jquery Nav JS -->
+        <script src="js/jquery.nav.js"></script>
+		<!-- Slicknav JS -->
+		<script src="js/slicknav.min.js"></script>
+		<!-- ScrollUp JS -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<!-- Niceselect JS -->
+		<script src="js/niceselect.js"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="js/tilt.jquery.min.js"></script>
+		<!-- Owl Carousel JS -->
+        <script src="js/owl-carousel.js"></script>
+		<!-- counterup JS -->
+		<script src="js/jquery.counterup.min.js"></script>
+		<!-- Steller JS -->
+		<script src="js/steller.js"></script>
+		<!-- Wow JS -->
+		<script src="js/wow.min.js"></script>
+		<!-- Magnific Popup JS -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+    </body>
+</html>
