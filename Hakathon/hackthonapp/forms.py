@@ -45,3 +45,27 @@ class UserLoginForm(AuthenticationForm):
         'autocomplete':'current-password',
         'class':'form-control',
     }))
+
+ 
+
+class UserPasswordResetForm(PasswordResetForm):
+     email=forms.EmailField(required=True,label=_("email"),widget=forms.EmailInput(attrs={
+         'class':'form-control',
+         'placeholder':'enter email',
+         'autocomplete':'email',
+    }))
+     
+class MySetPasswordForm(SetPasswordForm):
+    new_password1=forms.CharField(label=_("new password"),strip=False,widget=forms.PasswordInput(attrs={
+        'class':'form-control',
+        'autocomplete':'new-password',
+
+    }),help_text=password_validation.
+    password_validators_help_text_html()
+    )
+
+    new_password2=forms.CharField(label=_("repeat password"),strip=False,widget=forms.PasswordInput(attrs={
+        'class':'form-control',
+        'autocomplete':'new-password',
+
+    }))

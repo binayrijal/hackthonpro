@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
+
 
 import requests
 from bs4 import BeautifulSoup
@@ -7,12 +10,9 @@ from bs4 import BeautifulSoup
 CATEGORY_CHOICES=(
     ('Passport','Passport'),
     ('Transportation','Transportation'),
-    ('NEB','NEB'),
-    ('ward','ward'),
+    ('Citizenship','Citizenship'),
     ('Municipality','Municipality'),
-    ('Dist_office','Dist_office'),
-    ('HighCourt','HighCourt'),
-    ('DistCourt','DistCourt'),
+   
 
 )
 
@@ -24,13 +24,23 @@ class service(models.Model):
        return self.category
 
 
+
 class service_name(models.Model):
-    
-    service=models.ForeignKey(service,on_delete=models.CASCADE)
+    category=models.ForeignKey(service,on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
     methods=models.TextField()
 
     def __str__(self):
         return self.name
     
+
+class feedback(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    email=models.EmailField()
+    service_name=models.ForeignKey(service_name,on_delete=models.CASCADE)
+    phone = models.CharField(max_length=10, validators=[RegexValidator(r'^\d{10}$', 'Phone number must be 10 digits')])
+    Date = models.DateTimeField(auto_now_add=True)
+    message=models.TextField(max_length=200)
+
+
     

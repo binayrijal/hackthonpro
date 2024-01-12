@@ -6,19 +6,18 @@ body {
 
 
 #sidebar {
-    margin: 2rem;
-    margin-left: 4rem;
+    margin: 0 2rem 0 4rem;
 
     /* border-right: 1px solid hsl(220, 13%, 91%); */
 }
 
 .section-container {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+
 }
 
-.section-container>#sidebar-navigation {
-    width: 30%;
+#sidebar-navigation {
     padding: 2rem 0;
     height: 100vh;
     overflow-y: auto;
@@ -49,7 +48,7 @@ body {
 
 .sidebar-lists {
     list-style: none;
-    padding: 0;
+    margin: 0;
 
 }
 
@@ -112,44 +111,31 @@ body {
 
 /* bold transportation  sidebar applied only when its respective page is rendered */
 /*  if the route url===desired url then add the class open  from backend. */
-.transport-department__list--item a.open {
+/* .transport-department__list--item a.open {
     font-weight: 700;
     opacity: 1;
-}
+} */
 
 #transport-office {
-    margin: 4rem;
+    margin: 2rem;
 }
 
-.transport-office__header {
-    font-weight: 600;
-    width: 100%;
-    font-family: "Montserrat" sans-serif;
-    line-height: 28px;
+.transport-office__header,
+.trans-location__title {
     font-size: 1.5rem;
-    color: rgba(25, 25, 25, 0.9);
+    opacity: 80%;
     margin: 0 0 24px 0;
 }
 
 .transport-office__description {
-    font-family: "Montserrat" sans-serif;
-    width: 100%;
-    line-height: 28px;
-    font-family: inherit;
+
     font-size: 1.135rem;
-    color: rgb(39, 39, 39);
+    font-weight: 400;
+    color: rgb(80, 80, 80);
     margin: 0 0 1.5rem 0;
 }
 
 /* search bar */
-.trans-location__title {
-    width: 100%;
-    font-size: 1.5rem;
-    color: rgba(25, 25, 25, 0.9);
-    margin: 1rem 0 1.5rem 0;
-
-}
-
 .trans-location__form {
     margin: 0 0 1.5rem 0;
 }
@@ -194,7 +180,10 @@ body {
 }
 
 .btn.search {
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
     background-color: white;
     color: black;
     border-radius: 12px;
@@ -203,10 +192,7 @@ body {
     top: 0.2rem;
     bottom: 0.2rem;
     right: 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+
 
 }
 
@@ -219,27 +205,96 @@ body {
 span {
     padding: 0.5rem 0.8rem;
     font-size: 0.8rem;
-    font-family: 'IBM Plex Mono' monospace;
-    font-weight: 600;
 }
 
 /* edl */
+
 .nearby-office {
-    border-radius: 20px;
-    border: 1px solid gray;
-    width: 50vw;
+    width: 50%;
 }
 
 .nearby-office ul {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     list-style: none;
+    padding: 0 0.5rem;
 }
 
-.nearby-office ul>li {
-
+.office-list {
+    width: fit-content;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 
-office-list h4 {}
+.list-child__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 55%;
+}
+
+.list-child__content h3,
+p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.list-child__content p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #555;
+
+}
+
+
+.list-child__icon {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon button {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon p {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.fa-route,
+.fa-earth-africa {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+.closed {
+    font-size: 0.8rem;
+    color: red;
+    padding: 0;
+}
