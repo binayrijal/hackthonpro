@@ -1,0 +1,272 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- fontawessome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/shared.css' %}">
+    <link rel="stylesheet" href="{% static 'css/service.css'%}">
+
+    <!-- Add mapbox JavaScript -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+        rel="stylesheet" />
+    <style>
+        .span.open {
+            color: green;
+        }
+
+        .span.closed {
+            color: red;
+        }
+    </style>
+    <script src="{% static 'js/share.js'%}"></script>
+    <script src="{% static 'js/service.js'%}"></script>
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <div class="main-header__div">
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+            <a href="../index.html" class="main-header__brand">
+                <img src="{%static 'images/images/dragon-1578289_640.png'%}" alt=" dragon image">
+                <h2>easygov</h2>
+            </a>
+
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="../profile/index.html">Profile</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html">Services</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../aboutUs/index.html">About Us</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../contactUs/index.html">Contact Us</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="../signup/index.html">Sign up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="../profile/index.html">Profile</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="index.html">Services</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../aboutUs/index.html">About Us</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../contactUs/index.html">Contact Us</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../service/index.html">Services</a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--cta">
+                <a href="../signup/index.html">Sign up</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="section-container">
+            <section id="sidebar">
+                <aside id="sidebar-navigation">
+                    <ul class="sidebar-lists">
+                        {%if selected_service%}
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+
+                                <h2 class="transport-department__list--title"> <a
+                                        href="#transportation"></a>{{selected_service}} </a></h2>
+
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                {%for s in selected_servicename%}
+                                <li class="transport-department__list--item"><a href="">{{s}}</a></li>
+                                <!--<li class="transport-department__list--item"><a href="">Renew Licence</a></li>
+                                <li class="transport-department__list--item"><a class="open" href="">new vehicle
+                                        registration</a>
+                                </li>-->
+                                {%endfor%}
+                            </ul>
+                        </li>
+                        {%endif%}
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512">!Font Awesome Free 6.5.1 by @fontawesome -
+                                    https://fontawesome.com License - https://fontawesome.com/license/free Copyright
+                                    2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+                                <h2 class="transport-department__list--title">Citizenship</h2>
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                <li class="transport-department__list--item"><a href="">Bansaj</a></li>
+                                <li class="transport-department__list--item"><a href="">Citizenship by Birth</a></li>
+                                <li class="transport-department__list--item"><a href="">Citizenship by
+                                        naturalization.</a></li>
+                            </ul>
+                        </li>
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+                                <h2 class="transport-department__list--title">Municipality</h2>
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                <li class="transport-department__list--item"><a href="">Marriage registration</a></li>
+                                <li class="transport-department__list--item"><a href="">Birth registration</a></li>
+                                <li class="transport-department__list--item"><a href="">Death registration</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+                                <h2 class="transport-department__list--title">Tax Department</h2>
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                <li class="transport-department__list--item"><a href="">pay tax</a></li>
+                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
+                                <li class="transport-department__list--item"><a href="">Lorem ipsum dolor sit.</a></li>
+                            </ul>
+                        </li>
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+                                <h2 class="transport-department__list--title">Passport</h2>
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                <li class="transport-department__list--item"><a href="">First Time Password</a></li>
+                                <li class="transport-department__list--item"><a href="">Renew Passport</a></li>
+                            </ul>
+                        </li>
+                        <li title="transport-department__list" class="transport-department__list">
+                            <div class="transport-department__list--header">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                    <path
+                                        d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
+                                </svg>
+                                <h2 class="transport-department__list--title">Lorem, ipsum dolor.</h2>
+                            </div>
+
+                            <ul class="transport-department__list--items">
+                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
+                                <li class="transport-department__list--item"><a href="">Lorem.e</a></li>
+                                <li class="transport-department__list--item"><a href="">Lorem ipsum dolor sit.</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section id="transport-office">
+                <div class="trans-info">
+                    <h1 class="transport-office__header">Introduction</h1>
+                    <p class="transport-office__description">Department of Transport Management was established in 2041
+                        B.S.
+                        for the
+                        smooth management of transport. The purpose of this department and its affiliation, as per
+                        Vehicle
+                        and Transport Management Act 2049 and Vehicle and Transport Management Rules 2054, is to provide
+                        safe, reliable and easy transportation service to the public and goods carrier.</p>
+                    {%for methods in all_methods%}
+                    <h1>{{all_methods}}</h1>
+                    {%endfor%}
+                </div>
+                <h1 class="trans-location__title"> See the nearby office</h1>
+                <div class="trans-location__form">
+                    <form class="home-form">
+                        <div class="crosshair-container">
+                            <i class="fas fa-location-crosshairs"></i>
+                            <input id="search-input" placeholder="..." type="search" class="form-input" />
+                        </div>
+                        <!-- inintially the user location will be loaded and if user wants to change that then it can be done .-->
+                        <button class="search btn">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="nearby-office">
+                    <ul>
+                        <li class="office-list">
+                            <div class="list-child__content">
+                                <h3>DOTM,Chabhil</h3>
+                                <p>2.4 km (Appox. 24min)</p>
+                                <p>
+                                <p class="span">Closed</span>
+                                <p class="span1">opens 9AM tue</span>
+                                </p>
+                                <!-- Open | closes 4 PM today -->
+                            </div>
+                            <div class="list-child__icon">
+                                <div class="icon">
+                                    <a href="submit">
+                                        <i class="fa-solid fa-diamond-turn-right fa-2x"></i>
+                                    </a>
+                                    <p>Direction</p>
+                                </div>
+                                <div class="icon">
+                                    <a href="https://www.dotm.gov.np/" target="_blank"> <i
+                                            class="fa-solid fa-galactic-senate  fa-2x"></i>
+                                    </a>
+                                    <p>website</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        </section>
+        <div id="map" style="width: 40%; height: 400px;"></div>
+
+
+    </main>
+    <script src="{% static 'js/map.js'%}"></script>
+</body>
+
+</html>
