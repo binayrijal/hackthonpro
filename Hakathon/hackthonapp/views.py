@@ -40,7 +40,7 @@ from gtts import gTTS
 def text_to_speech(request):
     if request.method == 'POST':
         text = request.POST.get('text', '')
-        language = 'en'  # Set the language code accordingly
+        language = 'ne' #ne for nepali language
 
         tts = gTTS(text=text, lang=language, slow=False)
         tts.save('tts_app/static/tts_app/output.mp3')  # Save the TTS audio file
