@@ -1,14 +1,47 @@
-{%extends 'base.html'%}
+
 {%load static %}
-{% block content %}
-<main>
-    <section id="home-section">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/aboutus.css' %}">
+	<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/contactus.css' %}">
+	<link rel="stylesheet" href="{%static 'css/datapicker.css' %}">
+	<link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/iconfont.css' %}">
+	<link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{%static 'css/main.css' %}">
+	<link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{%static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{%static 'css/own-carousel.css' %}">
+	<link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{%static 'css/service.css' %}">
+	<link rel="stylesheet" href="{%static 'css/shared.css' %}">
+	<link rel="stylesheet" href="{%static 'css/slicknav.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+</head>
+
+<body>
+ <main>
+     <!--<section id="home-section">
         <div class="home-container">
-            <div class="home-image">
+            <div class="home-image"> 
                 <img src="https://demo.gethugothemes.com/docbox/site/images/banner-image_hu09361191bdbe261dd915020ba9ae33fa_18351_499x503_resize_q90_h2_lanczos_3.webp"
-                    alt="home background image">
+                    alt="home background image"> 
             </div>
-            <div class="home-content">
+           <div class="home-content">
                 <h1 class="home-content__header">Lets get started with Easygov</h1>
                 <p class="hoem-content__description">
                     we provide you with every detail of offices under Nepal Government for easy and
@@ -34,10 +67,10 @@
                         <i class="fas fa-search"></i>
                         <span>Search</span>
                     </button>
-                </form>
-            -->
-            </div>
-        </div>
+                </form> -->
+            
+           <!-- </div>
+        </div> -->
         <!-- End Preloader -->
 		
 		
@@ -53,7 +86,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="img/logo.png" alt="#"></a>
+									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -67,14 +100,15 @@
 										<ul class="nav menu">
 											
 											
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Contact Details <i class="icofont-rounded-down"></i></a>
+											<li><a href="{% url 'services' %}">Services </a></li>
+											<li><a href="{% url 'contact' %}">Contact Details <i class="icofont-rounded-down"></i></a>
 												
 											</li>
-											<li><a href="#">About Us <i class="icofont-rounded-down"></i></a>
+											<li><a href="{%url 'Aboutus'%}">About Us <i class="icofont-rounded-down"></i></a>
 												
 											</li>
-											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="{% url 'Contactus' %}">Contact Us</a>
+											</li>
 										</ul>
 									</nav>
 								</div>
@@ -84,7 +118,7 @@
 
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="signup.html" class="btn">login</a>
+									<a href="#" class="btn">login</a>
 								</div>
 							</div>
 						</div>
@@ -99,7 +133,7 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+				<div class="single-slider" style="background-image:url('{% static 'img/slider.jpg' %}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -117,7 +151,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/Untitled design.png')">
+				<div class="single-slider" style="background-image:url('{% static 'img/Untitled design.png' %}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -125,7 +159,7 @@
 									<h1>We Provide <span>List of E-governance</span> Services That You Can <span>Trust!</span></h1>
 									<p>Get Updated with Easy Gov-A Digital बडापत्र​. </p>
 									<div class="button">
-										<a href="#" class="btn">Services</a>
+										<a href="{% url 'services' %}" class="btn">Services</a>
 										<a href="#" class="btn primary">About Us</a>
 									</div>
 								</div>
@@ -224,7 +258,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Get Prepared Before You Visit The Government Ofiices</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{% static 'img/section-img.png' %}" alt="#">
 							<p>Don't keep getting rejected by officials just because you lacked information.</p>
 						</div>
 					</div>
@@ -278,7 +312,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Offer Different Services To EASE Your Government Office Visit Experience!</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{% static 'img/section-img.png' %}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -318,7 +352,7 @@
 									
 								</div>
 								<!--/ End Video Animation -->
-								<img src="img/Untitled design2.png" alt="EasyGov">
+								<img src="{% static 'img/Untitled design2.png' %}" alt="EasyGov">
 							</div>
 						</div>
 						<!-- End Choose Rights -->
@@ -354,7 +388,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Get Prepared Before You Visit The Government ofiices </h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{% static 'img/section-img.png' %}" alt="#">
 							<p>NO REJECTION,NO HASSLE!!!</p>
 						</div>
 					</div>
@@ -495,14 +529,15 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Are Always Ready to Help You.</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{% static 'img/section-img.png' %}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
+						<form class="form" action="" method="post">
+						    {% csrf_token %}
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
@@ -523,7 +558,7 @@
 									<div class="form-group">
 										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
 											<ul class="list">
-												<li data-value="1" class="option selected ">Liscence Department</li>
+												<li data-value="1" class="option selected">Liscence Department</li>
 												<li data-value="2" class="option">DOTM</li>
 												<li data-value="3" class="option">Foriegn Employment</li>
 												<li data-value="4" class="option">District Office</li>
@@ -560,7 +595,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="img/contact-img.png" alt="#">
+							<img src="{ % static 'img/contact-img.png' %}" alt="#">
 						</div>
 					</div>
 				</div>
@@ -632,44 +667,45 @@
 		<!--/ End Footer Area -->
 		
 		<!-- jquery Min JS -->
-        <script src="js/jquery.min.js"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
 		<!-- jquery Migrate JS -->
-		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
 		<!-- jquery Ui JS -->
-		<script src="js/jquery-ui.min.js"></script>
+		<script src="{% static 'js/jquery-ui.min.js' %}"></script>
 		<!-- Easing JS -->
-        <script src="js/easing.js"></script>
+        <script src="{% static 'js/easing.js' %}"></script>
 		<!-- Color JS -->
-		<script src="js/colors.js"></script>
+		<script src="{ % static 'js/colors.js' %}"></script>
 		<!-- Popper JS -->
-		<script src="js/popper.min.js"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
 		<!-- Bootstrap Datepicker JS -->
-		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
 		<!-- Jquery Nav JS -->
-        <script src="js/jquery.nav.js"></script>
+        <script src="{% static 'js/jquery.nav.js' %}"></script>
 		<!-- Slicknav JS -->
-		<script src="js/slicknav.min.js"></script>
+		<script src="{% static 'js/slicknav.min.js' %}"></script>
 		<!-- ScrollUp JS -->
-        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
 		<!-- Niceselect JS -->
-		<script src="js/niceselect.js"></script>
+		<script src="{ % static 'js/niceselect.js' %}"></script>
 		<!-- Tilt Jquery JS -->
-		<script src="js/tilt.jquery.min.js"></script>
+		<script src="{ % static 'js/tilt.jquery.min.js' %}"></script>
 		<!-- Owl Carousel JS -->
-        <script src="js/owl-carousel.js"></script>
+        <script src="{ % static 'js/owl-carousel.js' %}"></script>
 		<!-- counterup JS -->
-		<script src="js/jquery.counterup.min.js"></script>
+		<script src="{ % static 'js/jquery.counterup.min.js' %}"></script>
 		<!-- Steller JS -->
-		<script src="js/steller.js"></script>
+		<script src="{ % static 'js/steller.js' %}"></script>
 		<!-- Wow JS -->
-		<script src="js/wow.min.js"></script>
+		<script src="{ % static 'js/wow.min.js' %}"></script>
 		<!-- Magnific Popup JS -->
-		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="{ % static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="{ % static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
-		<script src="js/main.js"></script>
-    </body>
+		<script src="{ % static 'js/main.js' %}"></script>
+		<script src="{% static 'assets/js/service.js' %}"></script>
+</body>
 </html>

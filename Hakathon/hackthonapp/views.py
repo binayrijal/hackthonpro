@@ -7,7 +7,6 @@ from django.http import HttpResponse,JsonResponse
 from .models import service_name,service,feedback
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from gtts import gTTS
 
 
 # Create your views here.
@@ -16,10 +15,13 @@ def index(request):
     return render(request,'index.html')
 
 def Contactus(request):
-    return render (request,'contact_details.html')
+    return render (request,'contact.html')
 
 def Aboutus(request):
     return render (request,'Aboutus.html')
+
+def contactdetails(request):
+   return render(request,'contact.html')
 
 def Signup(request):
  if request.method=="POST":
@@ -39,16 +41,17 @@ def profile(request):
     return render (request,'profile.html')
 
 def services(request):
-    if request.method=="POST":
-       formdata=request.POST.get('search')
-       if formdata:
-        print(formdata)
-        selected_servicename = service_name.objects.filter(name=formdata)
-        all_methods=[]
-        for s in selected_servicename:
-          splitmethod=s.methods.split(',')
-          all_methods.extend(splitmethod)
-          return render(request,'services.html',{'selected_servicename':selected_servicename,'data':formdata,'all_methods':all_methods})
+   return render(request,'services.html')
+    # if request.method=="POST":
+    #    formdata=request.POST.get('search')
+    #    if formdata:
+    #     print(formdata)
+    #     selected_servicename = service_name.objects.filter(name=formdata)
+    #     all_methods=[]
+    #     for s in selected_servicename:
+    #       splitmethod=s.methods.split(',')
+    #       all_methods.extend(splitmethod)
+    #       return render(request,'services.html',{'selected_servicename':selected_servicename,'data':formdata,'all_methods':all_methods})
         
     #    else:
     #       messages.success(request,'done')
@@ -62,8 +65,25 @@ def services(request):
     #  return render(request,'services.html',{
     #     'all_service_names':all_service_names,
     #  })
-#    return render(request,'index.html')
-    
+   
+def select_service(request,data=None):
+ 
+ if data in ["bansaj","newlicense","birth","firstpassport"]:
+   service_names=service_name.objects.get(name=data) 
+   if service_names:
+      feedbackobj=feedback.objects.get(service_name=service_names)
+      all_methods=[]
+      all_message=[]
+      splitmessage=feedbackobj.message.split('.')
+      splitmethod=service_names.methods.split(',')
+      all_methods.extend(splitmethod)
+      all_message.extend(splitmessage)
+      return render(request, 'services.html',{'service_names':service_names,'methods':all_methods,'messages':all_message})
+
+  
+      
+      
+  
    
 def feedbackuser(request):
     if request.method=="POST":
@@ -76,29 +96,12 @@ def feedbackuser(request):
        if User.objects.filter(email=email).exists():
           feedback_message=feedback.objects.create(user=user,email=email,service_name=service,phone=phone,message=message)
           feedback_message.save()
-
-          if service==service_name.category:
-           
-           return render(request,'feedback.html',{'feedback':feedback_message,'service':service})
+          return redirect('index')
           
-          else:
-             
-             return render(request,'feedback.html',{'error':'service name select properly'})
           
        else:
            #yeslai jaha yo form ma click garera jaha action xa tya print garne
 
            messages.success(request,'user doesnot exist')
-       
-
-       
-
-          
-    
-          
-       
-
-       
-
     return render (request,'services.html')
 

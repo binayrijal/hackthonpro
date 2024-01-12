@@ -1,0 +1,228 @@
+/* mobile first design */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:100,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 5.738rem auto fit-content(6rem);
+    /* insted of min-height for main we can set 3 rows define explictlly the height of footer and padding top of the main */
+    height: 100%;
+    grid-template-areas: "header"
+        "main"
+        "footer"
+
+}
+
+main {
+    grid-area: main;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F6F6F6;
+    padding: 1.125rem 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    /* align the navbar and the logo center across cross axis ie vertically */
+    justify-content: space-between;
+}
+
+.main-header__div {
+    border-radius: 0 25px 25px 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+/* hamburger menu icon */
+.toggle-button {
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: gray;
+    display: block;
+    border-radius: 20px;
+    margin: 0.6rem 0;
+}
+
+/*   endl */
+
+
+/* logo */
+.main-header__brand {
+    width: 80%;
+    margin-left: 4rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header__brand h2 {
+    margin: 0;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    vertical-align: middle;
+    font-weight: bold;
+    color: black;
+
+}
+
+
+.main-header__brand img {
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* endl */
+
+
+/* navigation bar */
+.main-nav {
+    display: none;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.main-nav__item a,
+.mobile-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 0.2rem 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+    color: white;
+    background: #ff1b68;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+    color: #ff1b68;
+    background: white;
+    border: none;
+}
+
+@media(min-width:34rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: space-around;
+        min-width: 60%;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+/* endl */
+/* mobile navigation bar*/
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 40%;
+    height: 100vh;
+}
+
+.mobile-nav__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mobile-nav__item {
+    margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+    font-size: 1.5rem;
+}
+
+.open {
+    display: block !important;
+}
