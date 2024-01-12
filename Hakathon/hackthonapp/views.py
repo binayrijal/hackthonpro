@@ -5,6 +5,8 @@ from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse,JsonResponse
 from .models import service_name,service,feedback
 from django.contrib.auth.models import User
+from django.shortcuts import render
+from gtts import gTTS
 
 
 # Create your views here.
@@ -47,22 +49,19 @@ def services(request):
           all_methods.extend(splitmethod)
           return render(request,'services.html',{'selected_servicename':selected_servicename,'data':formdata,'all_methods':all_methods})
         
-       else:
-          return JsonResponse({"error":"error in selected file"},safe=False)
+    #    else:
+    #       messages.success(request,'done')
           
-
-
-
-    else:
-     all_service_names = service_name.objects.all()
+    # else:
+    #  all_service_names = service_name.objects.all()
 
     # Creating a list to hold methods from all service_name instances
     
 
-     return render(request,'services.html',{
-        'all_service_names':all_service_names,
-        'services':services,
-     })
+    #  return render(request,'services.html',{
+    #     'all_service_names':all_service_names,
+    #  })
+#    return render(request,'index.html')
     
    
 def feedbackuser(request):
@@ -99,7 +98,6 @@ def feedbackuser(request):
        
 
        
-=======
     return render (request,'services.html')
 
 from django.shortcuts import render
@@ -116,4 +114,4 @@ def text_to_speech(request):
         return render(request, 'tts_app/index.html', {'audio_path': 'static/tts_app/output.mp3'})
 
     return render(request, 'tts_app/index.html')
->>>>>>> 31ae614afcbaabb3c0fb1cf25a74f1d76c6a61a7
+
