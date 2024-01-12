@@ -3,7 +3,9 @@ from .forms import UserRegistrationForm
 from django.contrib import messages
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse,JsonResponse
-from .models import service,service_name
+from .models import service_name,service,feedback
+from django.contrib.auth.models import User
+
 
 # Create your views here.
 def index(request):
@@ -35,25 +37,23 @@ def profile(request):
 
 def services(request):
     if request.method=="POST":
-       formdata=request.POST.get('category')
-       
+       formdata=request.POST.get('search')
        if formdata:
-        selected_service = get_object_or_404(service, category=formdata)
-        selected_servicename = service_name.objects.filter(service=selected_service)
+        print(formdata)
+        selected_servicename = service_name.objects.filter(name=formdata)
         all_methods=[]
         for s in selected_servicename:
           splitmethod=s.methods.split(',')
           all_methods.extend(splitmethod)
-          return render(request,'services.html',{'selected_service':selected_service,'selected_servicename':selected_servicename,'data':formdata,'all_methods':all_methods})
+          return render(request,'services.html',{'selected_servicename':selected_servicename,'data':formdata,'all_methods':all_methods})
         
        else:
-          JsonResponse("error in selected file")
+          return JsonResponse({"error":"error in selected file"},safe=False)
           
 
 
 
     else:
-     services=service.objects.all()
      all_service_names = service_name.objects.all()
 
     # Creating a list to hold methods from all service_name instances
@@ -64,3 +64,37 @@ def services(request):
      })
     
    
+def feedbackuser(request):
+    if request.method=="POST":
+       user=request.POST.get('user')
+       email=request.POST.get('email')
+       service=request.POST.get('service')
+       phone=request.POST.get('phone')
+       message=request.POST.get('message')
+
+       if User.objects.filter(email=email).exists():
+          feedback_message=feedback.objects.create(user=user,email=email,service_name=service,phone=phone,message=message)
+          feedback_message.save()
+
+          if service==service_name.category:
+           
+           return render(request,'feedback.html',{'feedback':feedback_message,'service':service})
+          
+          else:
+             
+             return render(request,'feedback.html',{'error':'service name select properly'})
+          
+       else:
+           #yeslai jaha yo form ma click garera jaha action xa tya print garne
+
+           messages.success(request,'user doesnot exist')
+       
+
+       
+
+          
+    
+          
+       
+
+       
