@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import UserRegistrationForm
 from django.contrib import messages
+from .models import service_name
 
 # Create your views here.
 def index(request):
@@ -32,3 +33,13 @@ def profile(request):
 
 def services(request):
     return render (request,'services.html')
+
+def update_service_names(request):
+    try:
+        service_name.update_with_latest_updates()
+        message = "Service names updated successfully."
+    except Exception as e:
+        # Log the error, notify administrators, or handle it appropriately
+        message = f"Error updating service names: {e}"
+
+    return render(request, 'update_result.html', {'message': message})

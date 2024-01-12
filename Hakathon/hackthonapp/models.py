@@ -1,5 +1,8 @@
 from django.db import models
 
+import requests
+from bs4 import BeautifulSoup
+
 # Create your models here.
 CATEGORY_CHOICES=(
     ('Passport','Passport'),
@@ -29,3 +32,5 @@ class service_name(models.Model):
 
     def __str__(self):
         return self.name
+    
+    
