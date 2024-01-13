@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
 
+import requests
+from bs4 import BeautifulSoup
+
 # Create your models here.
 CATEGORY_CHOICES=(
     ('Passport','Passport'),
@@ -23,6 +26,7 @@ class service(models.Model):
 
 
 class service_name(models.Model):
+    id=models.IntegerField(primary_key=True)
     category=models.ForeignKey(service,on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
     methods=models.TextField()

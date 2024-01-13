@@ -268,7 +268,9 @@ p {
     align-items: center;
 }
 
-.icon button {
+.icon a {
+    text-decoration: none;
+    color: purple;
     width: 4rem;
     height: 4rem;
     display: flex;
@@ -293,8 +295,9 @@ p {
 
 }
 
-.closed {
-    font-size: 0.8rem;
-    color: red;
+
+
+.p {
+    font-size: 0.5rem;
     padding: 0;
 }
