@@ -10,6 +10,10 @@ from django.shortcuts import render
 
 
 # Create your views here.
+def base(request):
+   return render(request,'base.html')
+
+
 def index(request):
  
     return render(request,'index.html')
@@ -33,7 +37,7 @@ def Signup(request):
  else:
   form=UserRegistrationForm()
 
- return render(request, 'Signup.html',{
+ return render(request, 'customerregistration.html',{
   'form':form,
  })
 
@@ -68,16 +72,19 @@ def services(request):
    
 def select_service(request,data=None):
  
- if data in ["bansaj","newlicense","birth","firstpassport"]:
+ if data in ["birthcertificate","newlicense","newpassport","addcategory",]:
    service_names=service_name.objects.get(name=data) 
    if service_names:
-      feedbackobj=feedback.objects.get(service_name=service_names)
+      feedbackobj=feedback.objects.filter(service_name=service_names)
       all_methods=[]
       all_message=[]
-      splitmessage=feedbackobj.message.split('.')
+      for m in feedbackobj:
+       splitmessage=m.message.split(',')
+       all_message.extend(splitmessage)
+
       splitmethod=service_names.methods.split(',')
       all_methods.extend(splitmethod)
-      all_message.extend(splitmessage)
+      
       return render(request, 'services.html',{'service_names':service_names,'methods':all_methods,'messages':all_message})
 
   
