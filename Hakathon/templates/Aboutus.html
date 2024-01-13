@@ -45,7 +45,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+									<a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -77,7 +77,7 @@
 
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="#" class="btn">login</a>
+									<a href="{% url 'Signup'%}" class="btn">signup</a>
 								</div>
 							</div>
 						</div>

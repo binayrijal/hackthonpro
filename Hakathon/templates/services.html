@@ -59,7 +59,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+									<a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -143,10 +143,11 @@
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'bansaj' %}">Bansaj</a></li>
-                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'birth' %}">Citizenship by Birth</a></li>
-                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'naturalization'%}">Citizenship by
-                                        naturalization.</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'newcitizenship'  %}" name="newcitizenship"> General Citizenship Card (नागरिकता प्रमाणपत्र):</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'naturalized' %} " name="naturalized"> Naturalized Citizenship Card (स्वभाविक नागरिकता प्रमाणपत्र)</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'children'%}" name="children"> Citizenship Card for Children (कन्या/केटा नागरिकता प्रमाणपत्र):.</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'foreign' %} " name="foreign"> Citizenship Card for Foreign Women Married to Nepali Citizens (विदेशी पतिलाई विवाहिता नागरिकता प्रमाणपत्र):</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'lostcase' %}" name="lostcase">Lost Case</a></li>
                             </ul>
                         </li>
                         <li title="transport-department__list" class="transport-department__list">
