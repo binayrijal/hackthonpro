@@ -72,7 +72,7 @@ def services(request):
    
 def select_service(request,data=None):
  
- if data in ["birthcertificate","newlicense","newpassport","addcategory","naturalized","children","foreign"]:
+ if data in ["birthcertificate","newlicense","newpassport","addcategory","naturalized","children","foreign","newcitizenship","lostcase"]:
    service_names=service_name.objects.get(name=data) 
    if service_names:
       feedbackobj=feedback.objects.filter(service_name=service_names)
