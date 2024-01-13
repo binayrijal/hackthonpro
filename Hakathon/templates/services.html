@@ -148,8 +148,8 @@
 
                             <ul class="transport-department__list--items">
                                 <li class="transport-department__list--item" ><a href="{%url 'select_services' 'marriage' %}" name="marriage">Marriage registration</a></li>
-                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'birthreg' %}"  name="birth">Birth registration</a></li>
-                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'deathreg' %}" name="death">Death registration</a>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'birthcertificate' %}"  name="birthcertificate">Birth registration</a></li>
+                                <li class="transport-department__list--item" ><a href="{%url 'select_services' 'deathreg' %}" name="deathreg">Death registration</a>
                                 </li>
                             </ul>
                         </li>
@@ -180,7 +180,7 @@
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'firstpassport' %}" name="firstpassport">First Time Passport</a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'newpassport' %}" name="newpassport">First Time Passport</a></li>
                                 <li class="transport-department__list--item"><a href="{%url 'select_services' 'renewpassport' %}" name="renewpassport">Renew Passport</a></li>
                             </ul>
                         </li>
@@ -191,11 +191,11 @@
                                     <path
                                         d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z" />
                                 </svg>
-                                <h2 class="transport-department__list--title">Lorem, ipsum dolor.</h2>
+                                <h2 class="transport-department__list--title">Licence Department</h2>
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">Lorem, ipsum dolor.</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'newlicense' %}" name="newlicense" >new_licence</a></li>
                                 <li class="transport-department__list--item"><a href="">Lorem.e</a></li>
                                 <li class="transport-department__list--item"><a href="">Lorem ipsum dolor sit.</a></li>
                             </ul>
