@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     span.innerText = "open";
     span.classList.add("open");
-    span1.innerHTML = "close at 4am";
+    span1.innerHTML = "closes at 4pm";
     span1.style.color = "red";
   }
 });

@@ -13,7 +13,7 @@ html {
     margin: 20px 100px;
     padding-left: 130px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .about-usservice--summery {
