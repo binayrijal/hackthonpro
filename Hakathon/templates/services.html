@@ -130,9 +130,9 @@
                             </div>
 
                             <ul class="transport-department__list--items">
-                                <li class="transport-department__list--item"><a href="">Bansaj</a></li>
-                                <li class="transport-department__list--item"><a href="">Citizenship by Birth</a></li>
-                                <li class="transport-department__list--item"><a href="">Citizenship by
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'bansaj' %}">Bansaj</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'birth' %}">Citizenship by Birth</a></li>
+                                <li class="transport-department__list--item"><a href="{% url 'select_services' 'naturalization'%}">Citizenship by
                                         naturalization.</a></li>
                             </ul>
                         </li>
@@ -181,7 +181,7 @@
 
                             <ul class="transport-department__list--items">
                                 <li class="transport-department__list--item"><a href="{%url 'select_services' 'firstpassport' %}" name="firstpassport">First Time Passport</a></li>
-                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'newlicence' %}" name="renewpassport">Renew Passport</a></li>
+                                <li class="transport-department__list--item"><a href="{%url 'select_services' 'renewpassport' %}" name="renewpassport">Renew Passport</a></li>
                             </ul>
                         </li>
                         <li title="transport-department__list" class="transport-department__list">

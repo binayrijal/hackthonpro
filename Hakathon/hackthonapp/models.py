@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
 
-import requests
-from bs4 import BeautifulSoup
-
 # Create your models here.
 CATEGORY_CHOICES=(
     ('Passport','Passport'),

@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth import views as auth_views
 from .forms import UserLoginForm,UserPasswordResetForm,MySetPasswordForm
 
+
 urlpatterns = [
     path('',views.index,name='index'),
     path('Aboutus/',views.Aboutus,name='Aboutus'),
