@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
 from .forms import UserLoginForm,UserPasswordResetForm,MySetPasswordForm
-from .views import text_to_speech
+
 
 urlpatterns = [
     path('',views.index,name='index'),
