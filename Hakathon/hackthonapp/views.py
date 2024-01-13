@@ -103,25 +103,5 @@ def feedbackuser(request):
            #yeslai jaha yo form ma click garera jaha action xa tya print garne
 
            messages.success(request,'user doesnot exist')
-<<<<<<< HEAD
-       
     return render (request,'services.html')
 
-from django.shortcuts import render
-from gtts import gTTS
-
-def text_to_speech(request):
-    if request.method == 'POST':
-        text = request.POST.get('text', '')
-        language = 'ne' #ne for nepali language
-
-        tts = gTTS(text=text, lang=language, slow=False)
-        tts.save('tts_app/static/tts_app/output.mp3')  # Save the TTS audio file
-
-        return render(request, 'tts_app/index.html', {'audio_path': 'static/tts_app/output.mp3'})
-
-    return render(request, 'tts_app/index.html')
-=======
-    return render (request,'services.html')
-
->>>>>>> f0e9722594ee6039182da0e5e62e2c5c3cc7a99f
