@@ -5,7 +5,7 @@
 
 - **User Reviews:** Benefit from user reviews that share real experiences, saving your time and helping you make informed choices.
   
-- - **Effortless Access:** Navigate government services with ease, eliminating the hassle of complex procedures.
+- **Effortless Access:** Navigate government services with ease, eliminating the hassle of complex procedures.
 
 - **User Rating and Recommendations:** Rate and recommend services based on your search history, enhancing personalized recommendations for a tailored experience.
  
