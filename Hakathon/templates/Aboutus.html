@@ -33,12 +33,65 @@
 </head>
 
 <body>
+    
+		<!-- Header Area -->
+		<header class="header" >
+			
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											
+											
+											<li><a href="{% url 'services' %}">Services </a></li>
+											<li><a href="{% url 'contact' %}">Contact Details <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{%url 'Aboutus'%}">About Us <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{% url 'Contactus' %}">Contact Us</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+
+							<div class="col-lg-2 col-12">
+								<div class="get-quote">
+									<a href="#" class="btn">login</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
     <main id="about-us">
         <div class="about-us__background"></div>
 
         <section class="about-us-flex">
             <div class="about-us__service--summery">
-                <h3 class="service-title">Welcome to Predicta!</h3>
+                <h3 class="service-title">Welcome to EasyGov!</h3>
                 <p class="service-description">Starting as a small business in kathmandu, we have big dreams. Our
                     passion for good governance means that we provide our customers with nothing but the highest quality
                     of service, that are guaranteed to meet their needs and keep them satisfied! <br>
