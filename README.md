@@ -8,7 +8,7 @@
   
 - **Effortless Access:** Navigate government services with ease, eliminating the hassle of complex procedures.
 
-- **User Rating and Recommendations:** Rate and recommend services based on your search history, enhancing personalized recommendations for a tailored experience.
+- **User Rating and Recommendations:** Users Rate and they are recommend services based on their search history, enhancing personalized recommendations for a tailored experience.
  
 - **Comprehensive Information:** Access detailed insights for informed decision-making on various services.
   
