@@ -1,4 +1,7 @@
 # EasyGov - A Digital बडापत्र​ ||Simplifying Government Services||
+# Introduction
+
+Welcome to EasyGov, where we revolutionize your interaction with government services. Seamlessly designed and intuitively crafted, our platform ensures effortless access to vital services, empowering you to navigate bureaucratic complexities with ease.
 
 ## Features
 
