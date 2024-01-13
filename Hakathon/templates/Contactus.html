@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contract Us</title>
+    <title>contact Us</title>
     <!--                        google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--                    css -->
+    <link rel="stylesheet" href="{%static 'css/contactus.css' %}">
     <link rel="stylesheet" href="{%static 'css/aboutus.css' %}">
 	<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
 	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
@@ -40,11 +41,64 @@
 
 <body>
     <!-- navbar -->
+    
+		<!-- Header Area -->
+		<header class="header" >
+			
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											
+											
+											<li><a href="{% url 'services' %}">Services </a></li>
+											<li><a href="{% url 'contact' %}">Contact Details <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{%url 'Aboutus'%}">About Us <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{% url 'Contactus' %}">Contact Us</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+
+							<div class="col-lg-2 col-12">
+								<div class="get-quote">
+									<a href="#" class="btn">login</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
     <main>
         <section id="contract-items">
             <div class="contract-detail">
                 <div>
-                    <h1 class="contract-detail__title">Contract Info</h1>
+                    <h1 class="contract-detail__title">Contact Info</h1>
                 </div>
                 <div class="contract-detail__item number">
                     <i class="fa-solid fa-phone-volume" style="color: #4fa155;"></i>
@@ -103,25 +157,25 @@
 		<!-- ScrollUp JS -->
         <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
 		<!-- Niceselect JS -->
-		<script src="{ % static 'js/niceselect.js' %}"></script>
+		<script src="{% static 'js/niceselect.js' %}"></script>
 		<!-- Tilt Jquery JS -->
-		<script src="{ % static 'js/tilt.jquery.min.js' %}"></script>
+		<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
 		<!-- Owl Carousel JS -->
-        <script src="{ % static 'js/owl-carousel.js' %}"></script>
+        <script src="{% static 'js/owl-carousel.js' %}"></script>
 		<!-- counterup JS -->
-		<script src="{ % static 'js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
 		<!-- Steller JS -->
-		<script src="{ % static 'js/steller.js' %}"></script>
+		<script src="{% static 'js/steller.js' %}"></script>
 		<!-- Wow JS -->
-		<script src="{ % static 'js/wow.min.js' %}"></script>
+		<script src="{% static 'js/wow.min.js' %}"></script>
 		<!-- Magnific Popup JS -->
-		<script src="{ % static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="{ % static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
-		<script src="{ % static 'js/main.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'assets/js/service.js' %}"></script>
 </body>
 

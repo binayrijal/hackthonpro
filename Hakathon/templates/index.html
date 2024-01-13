@@ -7,11 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-	<style>
-		.single-slider{
-		 background-image: url("{% static 'img/Untitled design.png' %}");
-		}
-	</style>
+
 	
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +15,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{%static 'css/aboutus.css' %}">
+ 
 	<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
 	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="{%static 'css/contactus.css' %}">
-	<link rel="stylesheet" href="{%static 'css/datapicker.css' %}">
+	<link rel="stylesheet" href="{%static 'css/datepicker.css' %}">
 	<link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
 	<link rel="stylesheet" href="{%static 'css/iconfont.css' %}">
 	<link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
-	<link rel="stylesheet" href="{%static 'css/main.css' %}">
 	<link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
 	<link rel="stylesheet" href="{%static 'css/normalize.css' %}">
-	<link rel="stylesheet" href="{%static 'css/own-carousel.css' %}">
+	<link rel="stylesheet" href="{%static 'css/owl-carousel.css' %}">
 	<link rel="stylesheet" href="{%static 'css/responsive.css' %}">
-	<link rel="stylesheet" href="{%static 'css/service.css' %}">
-	<link rel="stylesheet" href="{%static 'css/shared.css' %}">
 	<link rel="stylesheet" href="{%static 'css/slicknav.min.css' %}">
 	<link rel="stylesheet" href="{%static 'css/style.css' %}">
 
@@ -41,44 +33,7 @@
 
 <body>
  <main>
-     <!--<section id="home-section">
-        <div class="home-container">
-            <div class="home-image"> 
-                <img src="https://demo.gethugothemes.com/docbox/site/images/banner-image_hu09361191bdbe261dd915020ba9ae33fa_18351_499x503_resize_q90_h2_lanczos_3.webp"
-                    alt="home background image"> 
-            </div>
-           <div class="home-content">
-                <h1 class="home-content__header">Lets get started with Easygov</h1>
-                <p class="hoem-content__description">
-                    we provide you with every detail of offices under Nepal Government for easy and
-                    efficent experience of the users by saving time and effort.
-                </p>
-                <form class="home-form" method="post" action="{% url 'services' %}">
-                    {% csrf_token%}
-                    <input id="search-input" placeholder="Search nearby offices" type="search" id="form1"
-                        class="form-input" name="search" />
-                    <button class="search btn">
-                        <i class="fas fa-search"></i>
-                        <span>Search</span>
-                    </button>
-                </form>
-                <!--<form class="home-form" action="#" method="post" >
-                    {%csrf_token%}
-                    <select name="category" id="category-select" class="form-input">
-                        {% for c in categories %}
-                            <option  id="{{c.0}}" value="{{ c.0 }}">{{ c.1 }} </option>
-                        {% endfor %}
-                    </select>
-                    <button class="search btn">
-                        <i class="fas fa-search"></i>
-                        <span>Search</span>
-                    </button>
-                </form> -->
-            
-           <!-- </div>
-        </div> -->
-        <!-- End Preloader -->
-		
+=
 		
 	
 		<!-- Header Area -->
@@ -139,7 +94,7 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url( 'img/slider.jpg' )">
+				<div class="single-slider" style="background-image: url('{% static 'img/slider.jpg' %}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -601,7 +556,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="{ % static 'img/contact-img.png' %}" alt="#">
+							<img src="{% static 'img/contact-img.png' %}" alt="#">
 						</div>
 					</div>
 				</div>
@@ -681,7 +636,7 @@
 		<!-- Easing JS -->
         <script src="{% static 'js/easing.js' %}"></script>
 		<!-- Color JS -->
-		<script src="{ % static 'js/colors.js' %}"></script>
+		<script src="{% static 'js/colors.js' %}"></script>
 		<!-- Popper JS -->
 		<script src="{% static 'js/popper.min.js' %}"></script>
 		<!-- Bootstrap Datepicker JS -->
@@ -693,25 +648,25 @@
 		<!-- ScrollUp JS -->
         <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
 		<!-- Niceselect JS -->
-		<script src="{ % static 'js/niceselect.js' %}"></script>
+		<script src="{% static 'js/niceselect.js' %}"></script>
 		<!-- Tilt Jquery JS -->
-		<script src="{ % static 'js/tilt.jquery.min.js' %}"></script>
+		<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
 		<!-- Owl Carousel JS -->
-        <script src="{ % static 'js/owl-carousel.js' %}"></script>
+        <script src="{% static 'js/owl-carousel.js' %}"></script>
 		<!-- counterup JS -->
-		<script src="{ % static 'js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
 		<!-- Steller JS -->
-		<script src="{ % static 'js/steller.js' %}"></script>
+		<script src="{% static 'js/steller.js' %}"></script>
 		<!-- Wow JS -->
-		<script src="{ % static 'js/wow.min.js' %}"></script>
+		<script src="{% static 'js/wow.min.js' %}"></script>
 		<!-- Magnific Popup JS -->
-		<script src="{ % static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="{ % static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
-		<script src="{ % static 'js/main.js' %}"></script>
-		<script src="{% static 'assets/js/service.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+		{% comment %} <script src="{% static 'assets/js/service.js' %}"></script> {% endcomment %}
 </body>
 </html>

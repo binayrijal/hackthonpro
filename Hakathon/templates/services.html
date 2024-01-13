@@ -8,7 +8,6 @@
     <title>Services</title>
     <!-- fontawessome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/shared.css' %}">
     <link rel="stylesheet" href="{% static 'css/service.css'%}">
 
     <!-- Add mapbox JavaScript -->
@@ -17,6 +16,23 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
     <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
         rel="stylesheet" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+ 
+	<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/datepicker.css' %}">
+	<link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/iconfont.css' %}">
+	<link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{%static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{%static 'css/owl-carousel.css' %}">
+	<link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{%static 'css/slicknav.min.css' %}">
+	<link rel="stylesheet" href="{%static 'css/style.css' %}">
+
     <style>
         .span.open {
             color: green;
@@ -26,67 +42,64 @@
             color: red;
         }
     </style>
-    <script src="{% static 'js/share.js'%}"></script>
-    <script src="{% static 'js/service.js'%}"></script>
+  <script src="{% static 'js/service.js'%}"></script>
 </head>
 
 <body>
-    <div class="backdrop"></div>
-    <header class="main-header">
-        <div class="main-header__div">
-            <button class="toggle-button">
-                <span class="toggle-button__bar"></span>
-                <span class="toggle-button__bar"></span>
-                <span class="toggle-button__bar"></span>
-            </button>
-            <a href="../index.html" class="main-header__brand">
-                <img src="{%static 'images/images/dragon-1578289_640.png'%}" alt=" dragon image">
-                <h2>easygov</h2>
-            </a>
+{% comment %} header {% endcomment %}
 
-        </div>
-        <nav class="main-nav">
-            <ul class="main-nav__items">
-                <li class="main-nav__item">
-                    <a href="../profile/index.html">Profile</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="index.html">Services</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="../aboutUs/index.html">About Us</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="../contactUs/index.html">Contact Us</a>
-                </li>
-                <li class="main-nav__item main-nav__item--cta">
-                    <a href="../signup/index.html">Sign up</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <nav class="mobile-nav">
-        <ul class="mobile-nav__items">
-            <li class="mobile-nav__item">
-                <a href="../profile/index.html">Profile</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="index.html">Services</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="../aboutUs/index.html">About Us</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="../contactUs/index.html">Contact Us</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="../service/index.html">Services</a>
-            </li>
-            <li class="mobile-nav__item mobile-nav__item--cta">
-                <a href="../signup/index.html">Sign up</a>
-            </li>
-        </ul>
-    </nav>
+		<!-- Header Area -->
+		<header class="header" >
+			
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											
+											
+											<li><a href="{% url 'services' %}">Services </a></li>
+											<li><a href="{% url 'contact' %}">Contact Details <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{%url 'Aboutus'%}">About Us <i class="icofont-rounded-down"></i></a>
+												
+											</li>
+											<li><a href="{% url 'Contactus' %}">Contact Us</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+
+							<div class="col-lg-2 col-12">
+								<div class="get-quote">
+									<a href="#" class="btn">login</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
     <main>
         <div class="section-container">
             <section id="sidebar">
@@ -222,7 +235,7 @@
                     <form class="home-form">
                         <div class="crosshair-container">
                             <i class="fas fa-location-crosshairs"></i>
-                            <input id="search-input" placeholder="..." type="search" class="form-input" />
+                            <input id="search-input" placeholder="NCIT,Balkumari" type="search" class="form-input" />
                         </div>
                         <!-- inintially the user location will be loaded and if user wants to change that then it can be done .-->
                         <button class="search btn">
@@ -236,7 +249,7 @@
                         <li class="office-list">
                             <div class="list-child__content">
                                 <h3>DOTM,Chabhil</h3>
-                                <p>2.4 km (Appox. 24min)</p>
+                                <p>2.4 km [Appox. 24min]</p>
                                 <p>
                                 <p class="span">Closed</span>
                                 <p class="span1">opens 9AM tue</span>
@@ -295,23 +308,23 @@
 		<!-- ScrollUp JS -->
     <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
 		<!-- Niceselect JS -->
-	<script src="{ % static 'js/niceselect.js' %}"></script>
+	<script src="{% static 'js/niceselect.js' %}"></script>
 		<!-- Tilt Jquery JS -->
 	<script src="{ % static 'js/tilt.jquery.min.js' %}"></script>
 		<!-- Owl Carousel JS -->
-    <script src="{ % static 'js/owl-carousel.js' %}"></script>
+    <script src="{% static 'js/owl-carousel.js' %}"></script>
 		<!-- counterup JS -->
-	<script src="{ % static 'js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
 		<!-- Steller JS -->
-	<script src="{ % static 'js/steller.js' %}"></script>
+	<script src="{% static 'js/steller.js' %}"></script>
 		<!-- Wow JS -->
-	<script src="{ % static 'js/wow.min.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
 		<!-- Magnific Popup JS -->
-	<script src="{ % static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
-	<script src="{ % static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
 	<script src="{ % static 'js/main.js' %}"></script>
 
