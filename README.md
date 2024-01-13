@@ -1,7 +1,8 @@
 # EasyGov - A Digital बडापत्र​ ||Simplifying Government Services||
 
 ## Features
--**Latest Updates:** Stay informed with regular updates on government services, ensuring you have the latest information at your fingertips.
+
+- **Latest Updates:** Stay informed with regular updates on government services, ensuring you have the latest information at your fingertips.
 
 - **User Reviews:** Benefit from user reviews that share real experiences, saving your time and helping you make informed choices.
   
